@@ -1,0 +1,113 @@
+/* Admin Dashboard Grid System */
+.admin-layout {
+  padding: 20px;
+  background-color: #f0f4f8; /* Light gray/blue background for contrast */
+  min-height: 100vh;
+}
+
+/* .admin-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 15px 25px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  margin-bottom: 20px;
+} */
+
+.admin-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.admin-nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.menu-icon {
+    display: none;   /* Hidden on desktop */
+}
+
+.admin-nav-links a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* 6 equal columns */
+  gap: 20px;
+}
+
+/* Base Card Style */
+.dash-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Sizing Classes */
+.span-2 { grid-column: span 2; } /* Takes up 1/3 of the row */
+.span-3 { grid-column: span 3; } /* Takes up 1/2 of the row */
+.span-6 { grid-column: span 6; } /* Takes up the full row */
+.clickable-card { cursor: pointer; transition: transform 0.2s; }
+.clickable-card:hover { transform: translateY(-3px); box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+
+
+
+@media (max-width: 768px) {
+
+    .menu-icon {
+        display: block;      /* Show hamburger */
+        font-size: 28px;
+        cursor: pointer;
+    }
+
+    .admin-nav-links {
+        display: none;       /* Hide links */
+    }
+
+    .admin-nav-links.active {
+        display: flex;
+        flex-direction: column;
+
+        position: absolute;
+        top: 60px;
+        right: 0;
+
+        background: white;
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0,0,0,.2);
+    }
+
+    @media (max-width:768px){
+
+    @media (max-width:768px){
+
+    .dashboard-grid{
+        grid-template-columns:1fr;
+    }
+
+    .span-2,
+    .span-3,
+    .span-6{
+        grid-column:span 1;
+    }
+
+}
+
+}
+}
