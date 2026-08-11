@@ -101,7 +101,7 @@ export default function AllVolunteers() {
         status: 'Active' 
       });
 
-      const response = await fetch("https://resq-hand.onrender.com/", {
+      const response = await fetch("https://resq-hand.onrender.com/send-email", {
          method: "POST",
           headers: {
                       "Content-Type": "application/json",
