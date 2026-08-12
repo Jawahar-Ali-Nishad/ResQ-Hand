@@ -2,8 +2,7 @@ import React from "react";
 
 export default function Aboutus() {
     return (
-        <>
-        {/* --- ABOUT US SECTION --- */}
+       
 <section style={{ padding: '80px 20px', backgroundColor: '#ffffff', textAlign: 'center' }}>
   <div style={{ maxWidth: '1000px', margin: '0 auto' }} id="AboutUs">
     
@@ -50,6 +49,6 @@ export default function Aboutus() {
     </div>
   </div>
 </section>
-        </>
+        
     )
 }
