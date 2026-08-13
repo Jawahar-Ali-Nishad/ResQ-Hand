@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { db } from './firebase'; 
 import { collection, getDocs, doc, updateDoc, deleteDoc } from 'firebase/firestore';
 
-// 1. SET YOUR EXACT FIREBASE FOLDER NAME HERE:
+
 const COLLECTION_NAME = "Volunteers"; 
 
 export default function AllVolunteers() {
@@ -36,11 +36,11 @@ export default function AllVolunteers() {
   }, []); 
 
   const filteredVolunteers = volunteers.filter(vol => {
-    if (!searchTerm) return true; // Show everyone if search is empty
+    if (!searchTerm) return true; 
     
     const searchLower = searchTerm.toLowerCase();
     
-    // Safely check fields, preventing crashes if data is missing
+   
     const nameMatch = vol.name ? String(vol.name).toLowerCase().includes(searchLower) : false;
     const locMatch = vol.location ? String(vol.location).toLowerCase().includes(searchLower) : false;
     const distMatch = vol.district ? String(vol.district).toLowerCase().includes(searchLower) : false;

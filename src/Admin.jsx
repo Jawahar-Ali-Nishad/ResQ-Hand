@@ -155,7 +155,7 @@ const statusData = Object.entries(statusCount).map(
         </div>
       
 
-        {/* ROW 2: Charts (2 items -> span 3 each) */}
+       
         <div className="dash-card span-3" style={{ minHeight: '250px' }}>
           <h3>Emergency Requests by Type</h3>
           {/* <div style={{ marginTop: '30px', color: '#888' }}>[ Pie Chart Placeholder ]</div> */}
@@ -203,7 +203,7 @@ const statusData = Object.entries(statusCount).map(
 
             </div>
 
-        {/* ROW 3: Navigation Cards (2 items -> span 3 each) */}
+        
         <div 
           className="dash-card span-3 clickable-card" 
           onClick={() => navigate('/admin/AllRequest')}

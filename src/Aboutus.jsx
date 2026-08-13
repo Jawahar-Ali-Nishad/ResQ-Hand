@@ -11,10 +11,12 @@ export default function Aboutus() {
     </h2>
     
     <p style={{ fontSize: '18px', color: '#666', lineHeight: '1.8', marginBottom: '50px', maxWidth: '800px', margin: '0 auto 50px auto' }}>
-      When disasters strike, every second counts. ResQ Hand is a community-driven emergency response platform designed to instantly bridge the gap between people in urgent need and registered, ready-to-act volunteers. Whether it is natural floods, medical emergencies, or rescue operations, we ensure that hope is always backed by action.
+      When disasters strike, every second counts. ResQ Hand is a community-driven emergency response platform designed to instantly bridge 
+      the gap between people in urgent need and registered, ready-to-act volunteers. Whether it is natural floods, medical emergencies, or 
+      rescue operations, we ensure that hope is always backed by action.
     </p>
 
-    {/* 3-Column Highlights Grid */}
+    
     <div style={{ 
       display: 'grid', 
       gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', 
@@ -22,7 +24,7 @@ export default function Aboutus() {
       marginTop: '40px'
     }}>
       
-      {/* Highlight 1 */}
+    
       <div style={{ padding: '30px', backgroundColor: '#f9f9f9', borderRadius: '10px', boxShadow: '0 4px 6px rgba(0,0,0,0.05)' }}>
         <h3 style={{ fontSize: '22px', color: '#e53935', marginBottom: '15px' }}>Rapid Response</h3>
         <p style={{ color: '#555', lineHeight: '1.6' }}>
@@ -30,7 +32,7 @@ export default function Aboutus() {
         </p>
       </div>
 
-      {/* Highlight 2 */}
+    
       <div style={{ padding: '30px', backgroundColor: '#f9f9f9', borderRadius: '10px', boxShadow: '0 4px 6px rgba(0,0,0,0.05)' }}>
         <h3 style={{ fontSize: '22px', color: '#e53935', marginBottom: '15px' }}>Verified Volunteers</h3>
         <p style={{ color: '#555', lineHeight: '1.6' }}>
@@ -38,7 +40,7 @@ export default function Aboutus() {
         </p>
       </div>
 
-      {/* Highlight 3 */}
+      
       <div style={{ padding: '30px', backgroundColor: '#f9f9f9', borderRadius: '10px', boxShadow: '0 4px 6px rgba(0,0,0,0.05)' }}>
         <h3 style={{ fontSize: '22px', color: '#e53935', marginBottom: '15px' }}>Community First</h3>
         <p style={{ color: '#555', lineHeight: '1.6' }}>

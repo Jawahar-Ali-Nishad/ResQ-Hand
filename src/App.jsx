@@ -1,19 +1,19 @@
-import React from 'react'; // 'React' should usually be capitalized
+import React from 'react'; 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Home from './Homepage.jsx'; // Changed to match your pages folder
+import Home from './Homepage.jsx'; 
 import Volunteer from './Volunteer.jsx';
-import Helprequest from './Helprequest.jsx'; // Assuming you have a HelpRequest component
-import Admin from './Admin.jsx'; // Assuming you have an Admin component
+import Helprequest from './Helprequest.jsx'; 
+import Admin from './Admin.jsx'; 
 import AllRequest from './AllRequest.jsx';
-import AllVolunteer from './AllVolunteer.jsx'; // Assuming you have an AllVolunteer component
+import AllVolunteer from './AllVolunteer.jsx'; 
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        {/* When the URL is exactly '/', show the Home component */}
+      
         <Route path="/" element={<Home />} />
-        {/* When the URL is '/volunteer', show the Volunteer component */}
+       
         <Route path="/volunteer" element={<Volunteer />} />
         <Route path="/helprequest" element={<Helprequest />} />
         <Route path="/admin" element={<Admin />} />

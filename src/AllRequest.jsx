@@ -16,23 +16,22 @@ export default function AllRequests() {
   useEffect(() => {
     const requestsRef = collection(db, "requests");
 
-    // 2. Start the live listener
+    
     const unsubscribe = onSnapshot(requestsRef, (snapshot) => {
-      // 3. Unpack the data
+      
       const requestsData = snapshot.docs.map(doc => ({
         id: doc.id,
         ...doc.data()
       }));
       
-      // 4. Update the state
+      
       setRequests(requestsData);
-      setIsLoading(false); // Turn off the skeleton loader!
+      setIsLoading(false); 
     }, (error) => {
       console.error("Error fetching live requests: ", error);
       setIsLoading(false);
     });
 
-    // 5. Cleanup when you leave the page
     return () => {
       unsubscribe();
     };
@@ -179,7 +178,7 @@ const handleViewDetails = async (req) => {
     try {
       await deleteDoc(doc(db, "requests", id));
       
-      // setRequests(prevRequests => prevRequests.filter(req => req.id !== id));
+    
     } catch (error) {
       console.error("Error deleting request: ", error);
       alert("Could not remove the request from the database.");
@@ -261,7 +260,7 @@ const handleViewDetails = async (req) => {
         </div>
 
         <div style={{ display: 'flex', flexDirection: 'column', gap: '15px' }}>
-          {/* If loading is true, show 3 fake pulsating cards */}
+          
          {isLoading ? (
                <>
                <div className="skeleton-card"></div>
@@ -425,7 +424,7 @@ const handleViewDetails = async (req) => {
                 </button>
               )}
               
-              {/* 4. FIXED: Accept button hides if status is 'Rejected', 'Open', or 'Accepted' */}
+              
               {selectedRequest.status !== 'Rejected' && selectedRequest.status !== 'Open' && selectedRequest.status !== 'Resolved' && (
                 <button 
                   onClick={handleAccept}
